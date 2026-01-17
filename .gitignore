@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code local settings (personal memory etc.)
+.claude/settings.local.json
