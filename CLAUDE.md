@@ -9,11 +9,31 @@
 
 ## 含まれるスキル
 
+### コード生成
+
 | スキル | 用途 |
 | ------ | ---- |
 | `generate-component` | React コンポーネントとテストを生成 |
 | `generate-docs` | README、PR説明文、ADR を生成 |
 | `create-skill` | 新しいスキルを作成 |
+| `test-generate` | ユニットテスト・統合テストを生成 |
+
+### コード品質
+
+| スキル | 用途 |
+| ------ | ---- |
+| `code-review` | コードレビュー（正確性、可読性、保守性） |
+| `security-audit` | セキュリティ監査（OWASP Top 10 ベース） |
+| `refactoring` | リファクタリング（コードスメル解消） |
+| `debug-helper` | デバッグ支援（根本原因の特定） |
+
+### 設計・インフラ
+
+| スキル | 用途 |
+| ------ | ---- |
+| `api-design` | REST/GraphQL API 設計 |
+| `db-migration` | DB マイグレーション作成 |
+| `ci-cd-setup` | GitHub Actions CI/CD 構築 |
 
 ## カスタマイズのポイント
 
