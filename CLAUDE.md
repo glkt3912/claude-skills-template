@@ -35,6 +35,13 @@
 | `db-migration` | DB マイグレーション作成 |
 | `ci-cd-setup` | GitHub Actions CI/CD 構築 |
 
+### Git ワークフロー
+
+| スキル | 用途 |
+| ------ | ---- |
+| `commit` | コミットメッセージ生成（英語、Conventional Commits） |
+| `pr` | Pull Request 作成（日本語） |
+
 ## カスタマイズのポイント
 
 - `SKILL.md` の `description` は Claude の自動選択に使われるため、明確なキーワードを含める
