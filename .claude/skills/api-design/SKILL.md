@@ -19,20 +19,15 @@ RESTful または GraphQL の API を設計し、仕様書を作成する。
    - バージョニング戦略
 
 3. **エンドポイント設計**
-   - URL 構造、HTTP メソッド
-   - リクエスト/レスポンス形式
-   - エラーハンドリング
-
-4. **仕様書作成**
-   - OpenAPI (Swagger) 形式で出力
+   - `templates/openapi.yaml.tpl` をベースに作成
+   - `references/http-status-codes.md` を参照
 
 # REST 設計原則
 
 | 原則 | 説明 |
 | ---- | ---- |
-| リソース指向 | 名詞を使用（`/users`）、動詞は避ける |
-| HTTP メソッド | GET（取得）, POST（作成）, PUT（更新）, DELETE（削除） |
-| ステータスコード | 適切な HTTP ステータスを返す |
+| リソース指向 | 名詞を使用（`/users`） |
+| HTTP メソッド | GET, POST, PUT, DELETE |
 | 一貫性 | 命名規則、レスポンス形式を統一 |
 
 # レスポンス形式
@@ -40,10 +35,7 @@ RESTful または GraphQL の API を設計し、仕様書を作成する。
 ```json
 {
   "data": { ... },
-  "meta": {
-    "page": 1,
-    "total": 100
-  }
+  "meta": { "page": 1, "total": 100 }
 }
 ```
 
@@ -53,31 +45,15 @@ RESTful または GraphQL の API を設計し、仕様書を作成する。
 {
   "error": {
     "code": "VALIDATION_ERROR",
-    "message": "入力値が不正です",
-    "details": [
-      { "field": "email", "message": "有効なメールアドレスを入力してください" }
-    ]
+    "message": "入力値が不正です"
   }
 }
 ```
 
-# HTTP ステータスコード
+# 参照
 
-| コード | 用途 |
-| ------ | ---- |
-| 200 | 成功（GET, PUT） |
-| 201 | 作成成功（POST） |
-| 204 | 成功、レスポンスなし（DELETE） |
-| 400 | リクエスト不正 |
-| 401 | 認証エラー |
-| 403 | 権限エラー |
-| 404 | リソース未発見 |
-| 422 | バリデーションエラー |
-| 500 | サーバーエラー |
-
-# 出力
-
-`templates/openapi.yaml.tpl` を参照して OpenAPI 仕様を生成。
+- `templates/openapi.yaml.tpl` - OpenAPI テンプレート
+- `references/http-status-codes.md` - ステータスコード一覧
 
 # 制約
 
