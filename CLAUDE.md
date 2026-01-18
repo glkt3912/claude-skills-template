@@ -25,6 +25,7 @@
 | `code-review` | コードレビュー（正確性、可読性、保守性） |
 | `security-audit` | セキュリティ監査（OWASP Top 10 ベース） |
 | `refactoring` | リファクタリング（コードスメル解消） |
+| `architecture-guard` | アーキテクチャ品質検証（ガードレール） |
 
 ### デバッグ・調査
 
